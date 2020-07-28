@@ -1,0 +1,14 @@
+.flex-container {
+  display: flex;
+  height: "10em";
+  width: "10em";
+  background-color: pink;
+}
+
+.dot-div {
+  background-color: "hotpink";
+  border-color: "black";
+  height: "5em";
+  width: "5em";
+  border-radius: 50%;
+}
