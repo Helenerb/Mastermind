@@ -1,8 +1,13 @@
 .flex-container {
   display: flex;
-  height: "10em";
-  width: "10em";
-  background-color: pink;
+  height: 10em;
+  max-width: 10em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex-child {
+  flex: 1 1 25%;
 }
 
 .dot-div {

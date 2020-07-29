@@ -8,14 +8,23 @@ class Dot extends React.Component {
   //props: color
   render() {
     return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 10 10"
-        width="100%"
-        height="100%"
-      >
-        <circle cx="5" cy="5" r="5" fill="black" stroke="hotpink" />
-      </svg>
+      <div className="flex-child">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 10 10"
+          width="5em"
+          height="5em"
+        >
+          <circle
+            cx="5"
+            cy="5"
+            r="3"
+            fill={this.props.fill}
+            stroke={this.props.stroke}
+            stroke-width="0.3"
+          />
+        </svg>
+      </div>
     );
   }
 }
@@ -28,36 +37,34 @@ class DotDiv extends React.Component {
 
 class Validator extends React.Component {
   //this.props.validate: validate som sendes inn fra Game
+
   render() {
-    /*
+    console.log("validate: ", this.props.validate);
+
     let correctColorCorrectPlace = Array(this.props.validate[0])?.fill(
       <Dot fill="black" stroke="black" />
     );
     let correctColorWrongPlace = Array(this.props.validate[1])?.fill(
       <Dot fill="white" stroke="black" />
-    );
+    ); /*
     let wrongColorWrongPlace = Array(this.props.validate[2])?.fill(
-      <Dot fill="none" stroke="none" />
-    );*/
-    let correctColorCorrectPlace = Array(this.props.validate[0])?.fill(
-      <DotDiv />
-    );
-    let correctColorWrongPlace = Array(this.props.validate[1])?.fill(
-      <DotDiv />
-    );
-    let wrongColorWrongPlace = Array(this.props.validate[2])?.fill(<DotDiv />);
+      <Dot fill="none" stroke="none" />*/
     let answerCircles = [
       ...correctColorCorrectPlace,
       ...correctColorWrongPlace,
-      ...wrongColorWrongPlace,
     ];
+    let answerCirc;
     console.log("answerCircles:", answerCircles);
     return (
       <div className="flex-container">
-        <Dot />
-        <Dot />
-        <Dot />
-        <Dot />
+        {answerCircles[0]}
+        {answerCircles[1]}
+        {answerCircles[2]}
+        {answerCircles[3]}
+        {/*<Dot fill="hotpink" stroke="gray" />
+        <Dot fill="lightblue" stroke="gray" />
+        <Dot fill="pink" stroke="gray" />
+    <Dot fill="green" stroke="gray" />*/}
       </div>
     );
   }
