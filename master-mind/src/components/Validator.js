@@ -61,10 +61,6 @@ class Validator extends React.Component {
         {answerCircles[1]}
         {answerCircles[2]}
         {answerCircles[3]}
-        {/*<Dot fill="hotpink" stroke="gray" />
-        <Dot fill="lightblue" stroke="gray" />
-        <Dot fill="pink" stroke="gray" />
-    <Dot fill="green" stroke="gray" />*/}
       </div>
     );
   }

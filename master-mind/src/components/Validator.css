@@ -1,6 +1,6 @@
 .flex-container {
   display: flex;
-  height: 10em;
+  height: 100%;
   max-width: 10em;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -11,9 +11,9 @@
 }
 
 .dot-div {
-  background-color: "hotpink";
-  border-color: "black";
-  height: "5em";
-  width: "5em";
+  background-color: hotpink;
+  border-color: black;
+  height: 5em;
+  width: 5em;
   border-radius: 50%;
 }

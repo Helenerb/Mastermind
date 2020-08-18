@@ -1,9 +1,9 @@
 import React from "react";
 import "./Game.css";
-import ReactDOM from "react-dom";
-import App from "./App";
 import { Validate } from "./helperFunctions.js";
 import Validator from "./components/Validator.js";
+import {GameRow} from "./components/GameRow.js"
+import {HoleRow} from "./components/HoleRow.js"
 
 // Hvordan fungerer spillet?
 // 1. Fire farger blir gitt som fasit. Den må ligge i state ett eller annet sted, som et array.
@@ -17,7 +17,8 @@ import Validator from "./components/Validator.js";
 //        Hvis du bruker en dropdown for eksempel, sammen med et form, kan du begrense alternativene
 //        Dropdown slik som den er implementert nå, vil ikke ta inn noe. Så det må du endre på
 
-class ButtonHole extends React.Component {
+/*
+export class ButtonHole extends React.Component {
   render() {
     return (
       <button
@@ -34,7 +35,7 @@ class ButtonHole extends React.Component {
 // trenger vi en egen rad-komponent; siden man gjetter radhvis?
 // har funskjonen renderHole for å rendre på en kul måte?
 // kopiert etter board-klassen til tic-tac-toe
-class HoleRow extends React.Component {
+export class HoleRow extends React.Component {
   renderHole(i) {
     const colI = this.props.colorIdx[i];
     return (
@@ -57,8 +58,9 @@ class HoleRow extends React.Component {
     );
   }
 }
+*/
 
-class SubmitGuess extends React.Component {
+export class SubmitGuess extends React.Component {
   render() {
     return (
       <div>
@@ -70,7 +72,7 @@ class SubmitGuess extends React.Component {
   }
 }
 
-class Game extends React.Component {
+export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -104,24 +106,19 @@ class Game extends React.Component {
 
   render() {
     return (
-      <div>
         <div className="game">
-          <div className="game-board">
-            <HoleRow
+            {/*<HoleRow
               colors={this.state.colors}
               colorIdx={this.state.colorIdx}
               onClick={(i) => this.handleClick(i)}
             />
-          </div>
-          <div>
             <SubmitGuess onClick={() => this.handleSubmit()} />
-          </div>
-          <div>{Validate(this.state.fasit, this.state.guess)}</div>
-          <Validator validate={Validate(this.state.fasit, this.state.guess)} />
+            <Validator validate={Validate(this.state.fasit, this.state.guess)} />*/}
+            <GameRow colors={this.state.colors} colorIdx={this.state.colorIdx}
+             handleClick={(i) => this.handleClick(i)}
+            handleSubmit={() => this.handleSubmit()} fasit={this.state.fasit} guess={this.state.guess}/>
         </div>
-      </div>
     );
   }
 }
 
-export default Game;

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Card} from 'react-bootstrap';
-import Game from './Game';
+import {Game} from './Game';
 import ReactDOM from "react-dom";
 
 function App() {

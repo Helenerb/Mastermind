@@ -7,30 +7,11 @@ ol, ul {
   padding-left: 30px;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
 
 .status {
   margin-bottom: 10px;
 }
 
-.circle {
-  border: 1px solid #ffffff;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: 1em;
-  margin-top: 1em;
-  padding: 1em;
-  text-align: center;
-  width: 34px;
-  border-radius: 50%;
-}
 
 .square:focus {
   outline: none;
@@ -43,7 +24,9 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
-  align: center;
+  align-items: center;
+  height: 10em;
+  justify-content: space-evenly;
 }
 
 .game-info {
