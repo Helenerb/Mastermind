@@ -32,20 +32,3 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
-
-.submit {
-  border: 1px solid #ffffff;
-  float: left;
-  font-family: "Ebrima";
-  font-size: 18px;
-  font-weight: lighter;
-  line-height: 3px;
-  height: 34px;
-  margin-right: 1em;
-  margin-top: 1em;
-  padding: 1em;
-  text-align: center;
-  width: 102px;
-  border-radius: 0;
-  background: #ffffff;
-}

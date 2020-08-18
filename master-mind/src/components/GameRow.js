@@ -2,17 +2,10 @@ import React from "react";
 import "./GameRow.css";
 import { Validate } from "../helperFunctions.js";
 import Validator from "./Validator.js";
-import {SubmitGuess} from "../Game.js";
+import {SubmitGuess} from "./SubmitGuess.js";
 import {HoleRow} from "./HoleRow.js";
 
 export class GameRow extends React.Component {
-    // Du må sende inn:
-    //colors
-    //colorIdx
-    //handleClick
-    //handleSubmit
-    //fasit
-    //guess
     render() {
     return (
         <div className="game">
